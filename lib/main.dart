@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:haber_uygulamasi/home.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+
 import 'Screens/auth_type_selector.dart';
 
 User firebaseUser = FirebaseAuth.instance.currentUser;
@@ -20,6 +21,7 @@ void main() async {
     debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
+  
 }
 
 class MyApp extends StatefulWidget {
@@ -37,6 +39,7 @@ class _MyAppState extends State<MyApp> {
         textTheme: TextTheme(
           headline1: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
           headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          headline3: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
       debugShowCheckedModeBanner: false,

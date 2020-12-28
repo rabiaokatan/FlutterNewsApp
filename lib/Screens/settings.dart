@@ -14,7 +14,7 @@ class Settings extends StatelessWidget {
         actions: [
           Builder(
             builder: (context) => IconButton(
-              icon: Icon(Icons.login),
+              icon: Icon(Icons.exit_to_app),
               onPressed: () async {
                 final User user = _auth.currentUser; 
                 if (user == null) {
@@ -56,8 +56,10 @@ class Settings extends StatelessWidget {
             SizedBox(height: 380),
             Title(
               color: Colors.black,
-              child: Text("Okatan Medya v1.0",
-                  style: Theme.of(context).textTheme.headline1,),
+              child: Text(
+                "Okatan Medya v1.0",
+                style: Theme.of(context).textTheme.headline1,
+              ),
             ),
           ],
         ),
@@ -92,7 +94,10 @@ class Developer extends StatelessWidget {
               elevation: 10,
               child: Text(
                 "Github",
-                style: TextStyle(color: Colors.white,fontSize: 20,),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
               ),
               onPressed: _launchURL,
             ),
@@ -102,6 +107,7 @@ class Developer extends StatelessWidget {
     );
   }
 }
+
 _launchURL() async {
   const url = 'https://github.com/rabiaokatan';
   if (await canLaunch(url)) {
@@ -109,23 +115,5 @@ _launchURL() async {
   } else {
     throw 'Could not launch $url';
   }
-} 
-class Version extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: Text("Ayarlar"),
-      ),
-      body: Container(
-        margin: EdgeInsets.only(right: 50, bottom: 50, left: 50),
-        alignment: Alignment.topCenter,
-        child: Text(
-          "Okatan Medya v1.0",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-        ),
-      ),
-    );
-  }
 }
+
