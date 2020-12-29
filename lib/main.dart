@@ -13,7 +13,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   if (firebaseUser != null) {
-    firstWidget = MainScreen();
+    firstWidget = Home();
   } else {
     firstWidget = AuthTypeSelector();
   }

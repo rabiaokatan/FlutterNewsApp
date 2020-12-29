@@ -72,7 +72,7 @@ class _AuthTypeSelectorState extends State<AuthTypeSelector> {
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) =>
-                        _auth.currentUser == null ? SignInPage() : MainScreen(),
+                        _auth.currentUser == null ? SignInPage() : Home(),
                   ),
                 ),
               ),

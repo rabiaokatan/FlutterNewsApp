@@ -72,7 +72,7 @@ class __SignInBodyState extends State<_SignInBody> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => MainScreen(),
+          builder: (context) => Home(),
         ),
       );
     } on FirebaseAuthException catch (e) {
@@ -175,7 +175,7 @@ class __EmailPasswordFormState extends State<_EmailPasswordForm> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => MainScreen(),
+          builder: (context) => Home(),
         ),
       );
     } on FirebaseAuthException catch (e) {
