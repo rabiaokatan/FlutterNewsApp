@@ -33,18 +33,20 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.red,
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
-          headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          headline3: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
+         theme: ThemeData(
+         brightness: Brightness.light,
+          primaryColor: Colors.red,
+          textTheme: TextTheme(
+            headline1: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
+            headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            headline3: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+          ),
       ),
+
       debugShowCheckedModeBanner: false,
       home: Splash(),
     );
+
   }
 }
 

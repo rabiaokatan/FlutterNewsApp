@@ -4,6 +4,7 @@ import 'package:haber_uygulamasi/Screens/auth_type_selector.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Settings extends StatelessWidget {
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
@@ -53,14 +54,14 @@ class Settings extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Developer()));
               },
             ),
-            SizedBox(height: 380),
-            Title(
+            SizedBox(height: 400),
+           Title(
               color: Colors.black,
               child: Text(
                 "Okatan Medya v1.0",
                 style: Theme.of(context).textTheme.headline1,
               ),
-            ),
+            ), 
           ],
         ),
       ),

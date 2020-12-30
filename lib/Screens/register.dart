@@ -96,7 +96,7 @@ class _RegisterPageState extends State<RegisterPage> {
   void _register() async {
     try {
       final User user = (await _auth.createUserWithEmailAndPassword(
-        email: _emailController.text,
+        email: _emailController.text.trim(),
         password: _passwordController.text,
       ))
           .user;
@@ -105,18 +105,25 @@ class _RegisterPageState extends State<RegisterPage> {
           _success = true;
           _message = "Kayıt başarılı ${user.email}";
         });
-      } else {
+        }else {
         setState(() {
           _success = false;
           _message = "Kayıt başarısız.";
         });
       }
-    } catch (e) {
-      debugPrint(e.toString());
+    }  catch  (e) {
+    debugPrint(e.toString());
       setState(() {
         _success = false;
         _message = "Kayıt başarısız.\n\n$e";
       });
-    }
   }
 }
+     /* debugPrint(signUpError.toString()/*e.toString()*/);
+      setState(() {
+        _success = false;
+        //e yazıyordu aşağıda
+        _message = "Kayıt başarısız.\n\n$signUpError";
+      });*/
+    }
+  

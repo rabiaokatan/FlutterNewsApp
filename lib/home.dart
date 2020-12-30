@@ -36,7 +36,8 @@ class _HomeState extends State<Home>{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).primaryColor,
+         /// backgroundColor: themeColors(),
+         backgroundColor: Theme.of(context).primaryColor,
           centerTitle: true,
           title: Text("Haberler"),
           actions: [
