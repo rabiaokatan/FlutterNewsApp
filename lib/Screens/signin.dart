@@ -221,7 +221,6 @@ class __SignInProviderState extends State<_SignInProvider> {
               child: Text(
                 widget.infoText,
                 style: Theme.of(context).textTheme.headline2,
-                //TextStyle(fontWeight: FontWeight.bold),
               ),
               alignment: Alignment.center,
             ),

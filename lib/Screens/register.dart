@@ -119,11 +119,6 @@ class _RegisterPageState extends State<RegisterPage> {
       });
   }
 }
-     /* debugPrint(signUpError.toString()/*e.toString()*/);
-      setState(() {
-        _success = false;
-        //e yazıyordu aşağıda
-        _message = "Kayıt başarısız.\n\n$signUpError";
-      });*/
-    }
+
+}
   

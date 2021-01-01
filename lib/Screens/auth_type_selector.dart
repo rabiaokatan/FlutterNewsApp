@@ -6,8 +6,7 @@ import 'package:haber_uygulamasi/Screens/signin.dart';
 import '../home.dart';
 import 'register.dart';
 
-/// Bir kimlik doğrulama türü [Authentication Type] seçmek için
-/// bir UI [User Interface] sağlar.
+
 class AuthTypeSelector extends StatefulWidget {
   @override
   _AuthTypeSelectorState createState() => _AuthTypeSelectorState();
@@ -24,10 +23,12 @@ class _AuthTypeSelectorState extends State<AuthTypeSelector> {
                 actions: <Widget>[
                   FlatButton(
                     child: Text("Hayır"),
+                    textColor: Colors.red,
                     onPressed: () => Navigator.pop(context, false),
                   ),
                   FlatButton(
                     child: Text("Evet"),
+                    textColor: Colors.red,
                     onPressed: () => Navigator.pop(context, true),
                   ),
                 ]));
@@ -39,7 +40,6 @@ class _AuthTypeSelectorState extends State<AuthTypeSelector> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Theme.of(context).primaryColor,
-       // backgroundColor: Colors.red,
         title: Text("Okatan Medya"),
       ),
       body: WillPopScope(
@@ -52,7 +52,7 @@ class _AuthTypeSelectorState extends State<AuthTypeSelector> {
             Container(
               child: SignInButtonBuilder(
                 icon: Icons.person_add,
-                backgroundColor: Colors.red,
+                backgroundColor: Theme.of(context).primaryColor,
                 text: "Kayıt Ol",
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -67,7 +67,7 @@ class _AuthTypeSelectorState extends State<AuthTypeSelector> {
             Container(
               child: SignInButtonBuilder(
                 icon: Icons.verified_user,
-                backgroundColor: Colors.red,
+                backgroundColor: Theme.of(context).primaryColor,
                 text: "Giriş Yap",
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(

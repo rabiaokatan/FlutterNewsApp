@@ -14,7 +14,25 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home>{
   bool _loading;
   var newslist;
-
+   
+   Future<bool> _onBackPressed() {
+    return showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+                title: Text("Uygulamadan çıkmak istiyor musunuz?"),
+                actions: <Widget>[
+                  FlatButton(
+                    child: Text("Hayır"),
+                    textColor: Colors.red,
+                    onPressed: () => Navigator.pop(context, false),
+                  ),
+                  FlatButton(
+                    child: Text("Evet"),
+                    textColor: Colors.red,
+                    onPressed: () => Navigator.pop(context, true),
+                  ),
+                ]));
+  }
 
   void getNews() async {
     News news = News();
@@ -36,8 +54,8 @@ class _HomeState extends State<Home>{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-         /// backgroundColor: themeColors(),
          backgroundColor: Theme.of(context).primaryColor,
+         automaticallyImplyLeading: false,
           centerTitle: true,
           title: Text("Haberler"),
           actions: [
@@ -51,7 +69,9 @@ class _HomeState extends State<Home>{
             )
           ],
         ),
-        body: SafeArea(
+        body: WillPopScope(
+          onWillPop: _onBackPressed,
+          child: SafeArea(
         child: _loading
             ? Center(
                 child: CircularProgressIndicator(),
@@ -82,7 +102,8 @@ class _HomeState extends State<Home>{
                 ),
               ),
       ),
-    );
+        ),
+    ); 
   }
 }
 
