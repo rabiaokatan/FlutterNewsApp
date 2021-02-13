@@ -1,16 +1,49 @@
 # Flutter News App
 
-Hello, this is my first Flutter project.
+This is a Flutter project.<br>
+I used Firebase for database in this project.<br>
+I used newsapi.org for Anadolu Agency's news.
 
-## Getting Started
+Installation:
 
-This project is a starting point for a Flutter application.
+`flutter pub get`
 
-A few resources to get you started if this is your first Flutter project:
+Usage:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+`flutter run`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Images from project:
+
+<table>
+  <tr>
+    <td>Splash screen:</td>
+     <td>Login and Register pages:</td>
+     <td>News list page:</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/1.jpg" width="250"></td>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/2.gif" width="250"></td>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/3.gif" width="250"></td>
+  </tr>
+ </table>
+ <br/>
+<table>
+  <tr>
+    <td>When you touch a news:</td>
+     <td>You can share the news:</td>
+     <td>Settings page:</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/4.gif" width="250"></td>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/5.gif" width="250"></td>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/6.gif" width="250"></td>
+  </tr>
+ </table>
+<table>
+  <tr>
+    <td>When you click the back button app asks you: "Do you want to exit the application?":</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/rabiaokatan/FlutterNewsApp/blob/master/images/7.gif" width="250"></td>
+  </tr>
+ </table>
