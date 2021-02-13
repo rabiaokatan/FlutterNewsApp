@@ -1,6 +1,6 @@
-# haber_uygulamasi
+# Flutter News App
 
-A new Flutter project.
+Hello, this is my first Flutter project.
 
 ## Getting Started
 
